@@ -1,0 +1,22 @@
+@import 'vars';
+@import 'fonts';
+@import 'fonts_2';
+@import 'fonts_3';
+@import 'nullStyle';
+@import 'mixins';
+@import 'libs';
+@import 'global';
+@import 'hamburger';
+
+//====================================main-page=========================
+@import 'mainPage/mainHeader';
+@import 'mainPage/buttonToUp';
+@import 'mainPage/cats';
+@import 'mainPage/mainFooter';
+//====================================main-page=========================
+
+//====================================main-page-media===================
+@import 'mainPage/mediaMainAnyHover';
+@import 'mainPage/mediaMain';
+//====================================main-page-media===================
+
