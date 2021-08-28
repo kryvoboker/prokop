@@ -1,5 +1,6 @@
 // Получить кнопку:
 buttonUp = document.getElementById("btn-up");
+// buttonUp = document.querySelector(".main__btn-up");
 // stickyy = document.getElementById("sticky");
 
 // Когда пользователь прокручивает вниз 170px от верхней части документа, покажите кнопку
