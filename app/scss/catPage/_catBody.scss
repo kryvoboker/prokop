@@ -1,16 +1,15 @@
-.cats {
+.main-cat {
 	&__inner {
 		display: grid;
-		grid-template-columns: repeat(5, minmax(100px, 300px));
+		grid-template-columns: repeat(4, minmax(100px, 250px));
 		grid-template-rows: minmax(155px, auto);
 		grid-auto-flow: row;
 		column-gap: 10px;
-		justify-content: center;
 		padding: 10px;
 	}
 	&__item {
 		transition: all .5s;
-		margin: 15px;
+		margin: 0px 0px 10px 0px;
 	}
 	&__image {
 		position: relative;
@@ -28,7 +27,6 @@
 	&__title-box {
 		display: flex;
 		justify-content: center;
-		align-items: center;
 		width: 100%;
 		min-height: 20px;
 		margin-bottom: 5px;

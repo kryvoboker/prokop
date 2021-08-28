@@ -1,0 +1,9 @@
+@media (any-hover:hover) {
+	.cats-hover:hover {
+		box-shadow: 0 0 7px 2px #000;
+		.title-hover::before {
+			transform: scale(1);
+		}
+	}
+}
+

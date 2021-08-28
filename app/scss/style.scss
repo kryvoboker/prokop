@@ -11,10 +11,16 @@
 @import 'mainPage/buttonToUp';
 @import 'mainPage/cats';
 @import 'mainPage/mainFooter';
-//====================================main-page=========================
 
 //====================================media=============================
-@import 'mediaAnyHover';
-@import 'media';
+@import 'mainPage/mainMediaAnyHover';
+@import 'mainPage/mainMedia';
 //====================================media=============================
+
+//====================================main-page=========================
+
+//====================================cat-page==========================
+@import 'catPage/catFilter';
+@import 'catPage/catBody';
+//====================================cat-page==========================
 

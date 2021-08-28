@@ -18,16 +18,15 @@ buttonUp = document.getElementById("btn-up");
 
 // Когда пользователь прокручивает вниз 170px от верхней части документа, покажите кнопку
 window.onscroll = function () {
+	scrollSticky()
 	scrollFunction()
 };
 
 function scrollFunction() {
 	if (document.body.scrollTop > 170 || document.documentElement.scrollTop > 170) {
 		buttonUp.style.display = "block";
-		// stickyy.style.display = "block";
 	} else {
 		buttonUp.style.display = "none";
-		// stickyy.style.display = "none";
 	}
 }
 
@@ -45,14 +44,17 @@ const scrollToTop = () => {
 // scrollToTop();
 sticky = document.getElementById("sticky");
 
-window.onscroll = function () {
-	scrollSticky()
-};
+// window.onscroll = function () {
+// 	scrollSticky()
+// 	scrollFunction()
+// };
 
 function scrollSticky() {
 	if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
 		sticky.style.position = "fixed";
-		sticky.style.width = "calc(100vw - 55px)";
+		sticky.style.left = "0";
+		sticky.style.width = "100%";
+		sticky.style.padding = "0 40px";
 	} else {
 		sticky.style.position = "static";
 	}

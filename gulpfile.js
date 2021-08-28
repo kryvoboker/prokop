@@ -10,7 +10,7 @@ let path = {
 		fonts: projectFolder + "/fonts/",
 	},
 	app: {
-		html: [appFolder + "/*.html", "!" + appFolder + "/_*.html"],
+		html: [appFolder + "/**/*.html", "!" + appFolder + "/**/_*.html"],
 		css: appFolder + "/scss/style.scss",
 		js: appFolder + "/js/main.js",
 		img: appFolder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
@@ -77,6 +77,7 @@ function css() {
 			})
 		)
 		.pipe(dest(path.build.css))
+		.pipe(browsersync.stream())
 		.pipe(
 			cleanCss()
 		)

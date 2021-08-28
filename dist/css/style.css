@@ -223,7 +223,6 @@ body {
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
   min-height: 500px;
-  padding-top: 170px;
   -webkit-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s;
@@ -245,6 +244,37 @@ body {
 .sticky {
   width: 100%;
   background-color: #fff;
+}
+
+.title-hover::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 4px;
+  border-bottom: 3px solid #08ca08;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  margin: 0 auto;
+}
+
+.cats,
+.main-cat {
+  margin: 50px 0;
+}
+
+.main-cat {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 1fr;
+  height: 100%;
+  margin: 50px 0;
 }
 
 .burger-box {
@@ -585,43 +615,40 @@ body {
 }
 
 .cats__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(100px, 300px));
+  grid-template-rows: minmax(155px, auto);
+  grid-auto-flow: row;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
 }
 
 .cats__item {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 16%;
-          flex: 1 1 16%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-height: 250px;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
-  padding: 5px;
   margin: 15px;
 }
 
+.cats__image {
+  position: relative;
+  padding: 0 0 85% 0;
+  margin-bottom: 5px;
+}
+
 .cats__img {
-  width: 240px;
-  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .cats__title-box {
@@ -635,30 +662,16 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  min-height: 60px;
+  min-height: 20px;
+  margin-bottom: 5px;
 }
 
 .cats__title {
   position: relative;
   font-size: 16px;
   text-transform: uppercase;
+  text-align: center;
   padding: 5px 10px;
-}
-
-.cats__title::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  border-bottom: 3px solid #08ca08;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-  -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-          transform: scale(0);
 }
 
 .footer .container {
@@ -866,6 +879,66 @@ body {
   margin: 0 5px 20px 0;
 }
 
+.filter {
+  border: 1px solid #000;
+  min-height: 500px;
+  height: 100%;
+}
+
+.main-cat__inner {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, 250px));
+  grid-template-rows: minmax(155px, auto);
+  grid-auto-flow: row;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  padding: 10px;
+}
+
+.main-cat__item {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  margin: 0px 0px 10px 0px;
+}
+
+.main-cat__image {
+  position: relative;
+  padding: 0 0 85% 0;
+  margin-bottom: 5px;
+}
+
+.main-cat__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main-cat__title-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  min-height: 20px;
+  margin-bottom: 5px;
+}
+
+.main-cat__title {
+  position: relative;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 5px 10px;
+}
+
 @media (max-width: 1025px) {
   .burger-box {
     display: block;
@@ -1055,12 +1128,12 @@ body {
 }
 
 @media (any-hover: hover) {
-  .cats__item:hover {
+  .cats-hover:hover {
     -webkit-box-shadow: 0 0 7px 2px #000;
             box-shadow: 0 0 7px 2px #000;
   }
 
-  .cats__item:hover .cats__title::before {
+  .cats-hover:hover .title-hover::before {
     -webkit-transform: scale(1);
         -ms-transform: scale(1);
             transform: scale(1);
