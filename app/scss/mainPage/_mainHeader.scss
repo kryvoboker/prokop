@@ -1,0 +1,153 @@
+.header {
+	&__inner {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+	}
+	&__item {
+		border: 1px solid #000;
+	}
+	&__top {
+		display: grid;
+		grid-template-columns: 60px 150px minmax(60px, 1fr) auto;
+		grid-template-rows: 30px;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+	&__body {
+		position: relative;
+		display: grid;
+		grid-template-columns: 200px 200px 1fr 100px;
+		grid-template-rows: 50px;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+	&__logo-link {
+		font-family: inherit;
+		font-size: 35px;
+		font-weight: 500;
+		color: #b0a9a5;
+		text-transform: uppercase;
+		transition: all 1s;
+
+		& span {
+			display: inline-block;
+		}
+		& span:first-child {
+			color: #0b8eab;
+			transform: rotate(5deg);
+		}
+		& span:nth-child(2) {
+			color: #e2664c;
+			transform: rotate(-5deg);
+		}
+		& span:nth-child(3) {
+			color: #c44a9a;
+			transform: rotate(5deg);
+		}
+		& span:nth-child(4) {
+			color: #8a9bab;
+			transform: rotate(-5deg);
+		}
+		& span:nth-child(5) {
+			color: #e7a9b1;
+			transform: rotate(5deg);
+		}
+		& span:nth-child(6) {
+			color: #b00000;
+			transform: rotate(-5deg);
+		}
+		& span:nth-child(7) {
+			color: #4e4051;
+			transform: rotate(5deg);
+		}
+		& span:last-child {
+			color: #33CCCC;
+			transform: rotate(-5deg);
+		}
+		&.active {
+			font-size: 30px;
+			margin-bottom: 5px;
+		}
+	}
+	&__menu {
+		display: none;
+
+		position: absolute;
+		top: 65px;
+		max-width: 150px;
+		width: 100%;
+		min-height: 100px;
+		background-color: #fff;
+
+		&.active {
+			display: block;
+		}
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+	}
+	&__menu-item {
+		padding: 5px 10px;
+		margin: 5px 5px;
+
+		&.active {
+			.header__sub-list {
+				display: block;
+			}
+		}
+	}
+	&__menu-btn {
+		font-family: 'icomoon';
+		font-size: 20px;
+		color: #000;
+		background-color: transparent;
+	}
+	&__menu-btn::before {
+		content: "\e908";
+	}
+	&__sub-list {
+		display: none;
+
+		position: absolute;
+		top: 0;
+		right: -200px;
+		max-width: 200px;
+		width: 100%;
+		min-height: 100px;
+		background-color: #fff;
+	}
+	&__sub-menu-item {
+		padding: 5px 10px;
+		margin: 5px 10px;
+	}
+	&__search {
+		display: flex;
+	}
+	&__input {
+		display: inline-block;
+		flex: 1 1 auto;
+		border: 1px solid #000;
+	}
+	&__btn {
+		flex: 0 0 50px;
+	}
+	&__icons {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__icons-link {
+		font-family: 'icomoon';
+		font-size: 26px;
+		color: #000;
+
+		&:first-child::before {
+			content: "\e904";
+		}
+		&:last-child::before {
+			content: "\e903";
+		}
+	}
+}

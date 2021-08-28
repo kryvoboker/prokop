@@ -1,0 +1,142 @@
+@media ($maw: 1190px) {
+
+}
+@media ($maw: 1025px) {
+	
+	.main.active {
+		padding-top: 70px;
+	}
+	.footer-top {
+		flex-wrap: wrap;
+	}
+	.footer__row:first-child {
+		flex: 1 1 100%;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 0 30px;
+	}
+	.footer__info {
+		flex: 1 1 66%;
+		margin: 0px 20px 0px 0px;
+	}
+	.footer__subscribe {
+		flex: 0 1 30%;
+	}
+	.footer .title {
+		line-height: 30px;
+	}
+	.footer-bottom__payments {
+		text-align: right;
+	}
+}
+@media ($maw: 1025px) and (any-hover: hover) {
+	
+}
+@media ($maw: 1025px) and (orientation: landscape) {
+	
+}
+@media ($maw: 891px) {
+	.footer .title {
+		font-size: 26px;
+		line-height: 37px;
+	}
+	.footer__info-text, 
+	.footer__subscribe-text	 {
+		font-size: 18px;
+	}
+	.footer__menu-item, 
+	.footer__contact-us-item {
+		font-size: 18px;
+		margin: 20px 0;
+	}
+}
+@media ($maw: 701px) {
+	.footer__menu {
+		flex-wrap: wrap;
+	}
+	.footer__menu-items {
+		margin: 0 15px 30px 0;
+	}
+}
+@media ($maw: 600px) {
+	.footer__row:first-child {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+	.footer__info {
+		margin: 0px 0px 30px 0px;
+	}
+	.footer__form {
+		justify-content: center;
+	}
+}
+@media ($maw: 531px) {
+	.main.active {
+		padding-top: 82px;
+	}
+	.footer-bottom__inner {
+		flex-wrap: wrap-reverse;
+		justify-content: center;
+		padding: 20px 0;
+	}
+	.footer-bottom__payments {
+		text-align: center;
+	}
+	.footer-bottom__img {
+		margin: 0 5px 20px 0;
+	}
+	.footer-bottom__img:last-child {
+		margin-right: 0;;
+	}
+	.footer-bottom .footer-bottom__license {
+		margin-right: 0;
+	}
+}
+@media ($maw: 500px) {
+	.main.active {
+		padding-top: 108px;
+	}
+}
+@media ($maw: 440px) {
+	
+}
+@media ($maw: 426px) {
+	.cats__img {
+		max-width: 375px;
+		width: 80vw;
+		height: 240px;
+	}
+	.cats__title {
+		font-size: 22px;
+	}
+}
+@media ($maw: 400px) {
+	
+}
+@media ($maw: 345px) {
+	.footer__form-input {
+		width: 100%;
+	}
+	.footer__socials-item:not(:first-child) {
+		margin-left: 14px;
+	}
+	.footer__socials-item:not(:last-child) {
+		margin-right: 14px;
+	}
+}
+@media ($maw: 319px) {
+	.footer__socials-item {
+		margin: 0 auto;
+	}
+	.footer__socials-item:not(:first-child),
+	.footer__socials-item:not(:last-child) {
+		margin: 0 auto;
+	}
+}
+@media ($maw: 280px) {
+	.main.active {
+		padding-top: 122px;
+	}
+}
+
