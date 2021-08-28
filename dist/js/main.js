@@ -14,8 +14,6 @@ if (isMobile.any()) {
 }
 // Получить кнопку:
 buttonUp = document.getElementById("btn-up");
-// buttonUp = document.querySelector(".main__btn-up");
-// stickyy = document.getElementById("sticky");
 
 // Когда пользователь прокручивает вниз 170px от верхней части документа, покажите кнопку
 window.onscroll = function () {
@@ -55,9 +53,10 @@ function scrollSticky() {
 		sticky.style.position = "fixed";
 		sticky.style.left = "0";
 		sticky.style.width = "100%";
-		sticky.style.padding = "0 40px";
+		sticky.style.padding = "0 20px";
 	} else {
 		sticky.style.position = "static";
+		sticky.style.padding = "0";
 	}
 }
 window.onload = function () {

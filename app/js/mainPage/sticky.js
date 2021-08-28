@@ -10,8 +10,9 @@ function scrollSticky() {
 		sticky.style.position = "fixed";
 		sticky.style.left = "0";
 		sticky.style.width = "100%";
-		sticky.style.padding = "0 40px";
+		sticky.style.padding = "0 20px";
 	} else {
 		sticky.style.position = "static";
+		sticky.style.padding = "0";
 	}
 }
