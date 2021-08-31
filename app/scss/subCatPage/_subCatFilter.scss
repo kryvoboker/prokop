@@ -2,4 +2,12 @@
 	border: 1px solid #000;
 	min-height: 500px;
 	height: 100%;
+
+	& label {
+		display: block;
+	}
+}
+.range-slider {
+    position: relative;
+    height: 80px;
 }

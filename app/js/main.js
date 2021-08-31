@@ -5,3 +5,7 @@
 @@include('./mainPage/sticky.js')
 @@include('./mainPage/menu.js')
 //====================================main-page=========================
+
+//====================================subCat-page=======================
+@@include('./ion-rangeslider/ionScript.js')
+//====================================subCat-page=======================

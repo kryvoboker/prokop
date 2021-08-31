@@ -885,6 +885,15 @@ body {
   height: 100%;
 }
 
+.filter label {
+  display: block;
+}
+
+.range-slider {
+  position: relative;
+  height: 80px;
+}
+
 .main-cat__inner {
   display: grid;
   grid-template-columns: repeat(4, minmax(100px, 250px));
