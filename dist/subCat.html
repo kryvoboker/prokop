@@ -9,7 +9,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/ion.rangeSlider.min.css">
+<link rel="stylesheet" href="css/ion.rangeSlider.css">
 <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -308,510 +308,518 @@
 						<div class="filter__inner">
 							<div class="filter__item">
 								<div class="filter__sort-list">
-									<button class="filter__sort-btn" type="button">По рейтингу</button>
+									<button class="filter__sort-btn active" type="button">По рейтингу</button>
 									<button class="filter__sort-btn" type="button">По популярности</button>
 									<button class="filter__sort-btn" type="button">От дешевых к дорогим</button>
 									<button class="filter__sort-btn" type="button">От дорогих к дешевым</button>
 								</div>
 							</div>
-						</div>
-						<div class="filter__item">
-							<div class="filter__range-slider">
-								<h5 class="filter__range-slider-title filter-title">
-									Диапазон цен, грн
-								</h5>
-								<div class="range-slider">
-									<input class="js-range-slider" type="text" value="" />
-								</div>
-								<div class="extra-controls">
-									<input class="js-input-from" type="text" value="0" />
-									<input class="js-input-to" type="text" value="0" />
+							<div class="filter__item">
+								<div class="filter__range-slider">
+									<h5 class="filter__range-slider-title filter-title">
+										Диапазон цен, грн
+									</h5>
+									<div class="range-slider">
+										<input class="js-range-slider" type="text" value="" />
+									</div>
+									<div class="extra-controls">
+										<input class="js-input-from" type="text" value="0" />
+										<input class="js-input-to" type="text" value="0" />
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="filter__item">
-							<div class="filter__sale-method">
-								<button class="filter__sale-btn" type="button">В наличии</button>
-								<button class="filter__sale-btn" type="button">Скидка</button>
-								<button class="filter__sale-btn" type="button">ОПТ</button>
+							<div class="filter__item">
+								<div class="filter__sale-method">
+									<button class="filter__sale-btn" type="button">В наличии</button>
+									<button class="filter__sale-btn" type="button">Скидка</button>
+									<button class="filter__sale-btn" type="button">ОПТ</button>
+								</div>
 							</div>
-						</div>
-						<div class="filter__item">
-							<div class="filter__manufacturer">
-								<h5 class="filter__manufacturer-title filter-title">Производитель</h5>
-								<div class="filter__manufacturer-list filter-list" id="manufacturerFilt">
-									<input type="text" placeholder="Искать..." id="searchManufFilt"
-										onkeyup="searchManufFunction()">
-									<label>
-										<input class="filter__manufacturer-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-check filter-check"></span>
-										Украина ТД
-									</label>
-									<label>
-										<input class="filter__manufacturer-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-check filter-check"></span>
-										IKEA
-									</label>
-									<label>
-										<input class="filter__manufacturer-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-check filter-check"></span>
-										Intex
-									</label>
-									<span id="dotsManufacturer"></span>
-									<span id="lookMoreManufacturer">
+							<div class="filter__item">
+								<div class="filter__manufacturer">
+									<h5 class="filter__manufacturer-title filter-title">Производитель</h5>
+									<div class="filter__manufacturer-list filter-list" id="manufacturerFilt">
+										<input type="text" placeholder="Искать..." id="searchManufFilt"
+											onkeyup="searchManufFunction()">
 										<label>
 											<input class="filter__manufacturer-input filter-input" type="checkbox">
 											<span class="filter__manufacturer-check filter-check"></span>
-											Bestway
+											Украина ТД
 										</label>
 										<label>
 											<input class="filter__manufacturer-input filter-input" type="checkbox">
 											<span class="filter__manufacturer-check filter-check"></span>
-											GRAND
+											IKEA
 										</label>
 										<label>
 											<input class="filter__manufacturer-input filter-input" type="checkbox">
 											<span class="filter__manufacturer-check filter-check"></span>
-											Maestro
+											Intex
 										</label>
-									</span>
-									<button onclick="moreManufacturer()" id="moreManufacturerBtn">Показать
-										больше</button>
+										<span id="dotsManufacturer"></span>
+										<span id="lookMoreManufacturer">
+											<label>
+												<input class="filter__manufacturer-input filter-input" type="checkbox">
+												<span class="filter__manufacturer-check filter-check"></span>
+												Bestway
+											</label>
+											<label>
+												<input class="filter__manufacturer-input filter-input" type="checkbox">
+												<span class="filter__manufacturer-check filter-check"></span>
+												GRAND
+											</label>
+											<label>
+												<input class="filter__manufacturer-input filter-input" type="checkbox">
+												<span class="filter__manufacturer-check filter-check"></span>
+												Maestro
+											</label>
+										</span>
+										<button onclick="moreManufacturer()" id="moreManufacturerBtn">Показать
+											больше</button>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="filter__item">
-							<div class="filter__material">
-								<h5 class="filter__material-title filter-title">Материал</h5>
-								<div class="filter__material-list filter-list">
-									<label>
-										<input class="filter__material-input filter-input" type="checkbox">
-										<span class="filter__material-check filter-check"></span>
-										Пластик
-									</label>
-									<label>
-										<input class="filter__material-input filter-input" type="checkbox">
-										<span class="filter__material-check filter-check"></span>
-										Металл
-									</label>
-									<label>
-										<input class="filter__material-input filter-input" type="checkbox">
-										<span class="filter__material-check filter-check"></span>
-										Сталь
-									</label>
-									<label>
-										<input class="filter__material-input filter-input" type="checkbox">
-										<span class="filter__material-check filter-check"></span>
-										ПВХ
-									</label>
-									<label>
-										<input class="filter__material-input filter-input" type="checkbox">
-										<span class="filter__material-check filter-check"></span>
-										Резина
-									</label>
-									<label>
-										<input class="filter__material-input filter-input" type="checkbox">
-										<span class="filter__material-check filter-check"></span>
-										Натуральное дерево
-									</label>
-									<label>
-										<input class="filter__material-input filter-input" type="checkbox">
-										<span class="filter__material-check filter-check"></span>
-										Полиуретан
-									</label>
-									<label>
-										<input class="filter__material-input filter-input" type="checkbox">
-										<span class="filter__material-check filter-check"></span>
-										Ткань
-									</label>
-									<label>
-										<input class="filter__material-input filter-input" type="checkbox">
-										<span class="filter__material-check filter-check"></span>
-										Латекс
-									</label>
-									<label>
-										<input class="filter__material-input filter-input" type="checkbox">
-										<span class="filter__material-check filter-check"></span>
-										Бумага
-									</label>
-									<label>
-										<input class="filter__material-input filter-input" type="checkbox">
-										<span class="filter__material-check filter-check"></span>
-										Пенопласт
-									</label>
-									<label>
-										<input class="filter__material-input filter-input" type="checkbox">
-										<span class="filter__material-check filter-check"></span>
-										Стекло
-									</label>
+							<div class="filter__item">
+								<div class="filter__material">
+									<h5 class="filter__material-title filter-title">Материал</h5>
+									<div class="filter__material-list filter-list">
+										<label>
+											<input class="filter__material-input filter-input" type="checkbox">
+											<span class="filter__material-check filter-check"></span>
+											Пластик
+										</label>
+										<label>
+											<input class="filter__material-input filter-input" type="checkbox">
+											<span class="filter__material-check filter-check"></span>
+											Металл
+										</label>
+										<label>
+											<input class="filter__material-input filter-input" type="checkbox">
+											<span class="filter__material-check filter-check"></span>
+											Сталь
+										</label>
+										<label>
+											<input class="filter__material-input filter-input" type="checkbox">
+											<span class="filter__material-check filter-check"></span>
+											ПВХ
+										</label>
+										<label>
+											<input class="filter__material-input filter-input" type="checkbox">
+											<span class="filter__material-check filter-check"></span>
+											Резина
+										</label>
+										<label>
+											<input class="filter__material-input filter-input" type="checkbox">
+											<span class="filter__material-check filter-check"></span>
+											Натуральное дерево
+										</label>
+										<label>
+											<input class="filter__material-input filter-input" type="checkbox">
+											<span class="filter__material-check filter-check"></span>
+											Полиуретан
+										</label>
+										<label>
+											<input class="filter__material-input filter-input" type="checkbox">
+											<span class="filter__material-check filter-check"></span>
+											Ткань
+										</label>
+										<label>
+											<input class="filter__material-input filter-input" type="checkbox">
+											<span class="filter__material-check filter-check"></span>
+											Латекс
+										</label>
+										<label>
+											<input class="filter__material-input filter-input" type="checkbox">
+											<span class="filter__material-check filter-check"></span>
+											Бумага
+										</label>
+										<label>
+											<input class="filter__material-input filter-input" type="checkbox">
+											<span class="filter__material-check filter-check"></span>
+											Пенопласт
+										</label>
+										<label>
+											<input class="filter__material-input filter-input" type="checkbox">
+											<span class="filter__material-check filter-check"></span>
+											Стекло
+										</label>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="filter__item">
-							<div class="filter__manufacturer-country">
-								<h5 class="filter__manufacturer-country-title filter-title">Страна производитель</h5>
-								<div class="filter__manufacturer-country-list filter-list" id="manufacturerContFilt">
-									<input type="text" placeholder="Искать..." id="searchManufacturerContFilt"
-										onkeyup="searchManufacturerContFunction()">
-									<label>
-										<input class="filter__manufacturer-country-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-country-check filter-check"></span>
-										Австралия
-									</label>
-									<label>
-										<input class="filter__manufacturer-country-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-country-check filter-check"></span>
-										Бельгия
-									</label>
-									<label>
-										<input class="filter__manufacturer-country-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-country-check filter-check"></span>
-										Бразилия
-									</label>
-									<label>
-										<input class="filter__manufacturer-country-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-country-check filter-check"></span>
-										Великобритания
-									</label>
-									<label>
-										<input class="filter__manufacturer-country-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-country-check filter-check"></span>
-										Германия
-									</label>
-									<label>
-										<input class="filter__manufacturer-country-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-country-check filter-check"></span>
-										Голландия
-									</label>
-									<span id="dotsManufacturerCont"></span>
-									<span id="lookMoreManufacturerCont">
+							<div class="filter__item">
+								<div class="filter__manufacturer-country">
+									<h5 class="filter__manufacturer-country-title filter-title">Страна производитель
+									</h5>
+									<div class="filter__manufacturer-country-list filter-list"
+										id="manufacturerContFilt">
+										<input type="text" placeholder="Искать..." id="searchManufacturerContFilt"
+											onkeyup="searchManufacturerContFunction()">
 										<label>
 											<input class="filter__manufacturer-country-input filter-input"
 												type="checkbox">
 											<span class="filter__manufacturer-country-check filter-check"></span>
-											Гонконг
+											Австралия
 										</label>
 										<label>
 											<input class="filter__manufacturer-country-input filter-input"
 												type="checkbox">
 											<span class="filter__manufacturer-country-check filter-check"></span>
-											Индия
+											Бельгия
 										</label>
 										<label>
 											<input class="filter__manufacturer-country-input filter-input"
 												type="checkbox">
 											<span class="filter__manufacturer-country-check filter-check"></span>
-											Индонезия
+											Бразилия
 										</label>
 										<label>
 											<input class="filter__manufacturer-country-input filter-input"
 												type="checkbox">
 											<span class="filter__manufacturer-country-check filter-check"></span>
-											Иран
+											Великобритания
 										</label>
 										<label>
 											<input class="filter__manufacturer-country-input filter-input"
 												type="checkbox">
 											<span class="filter__manufacturer-country-check filter-check"></span>
-											Италия
+											Германия
 										</label>
 										<label>
 											<input class="filter__manufacturer-country-input filter-input"
 												type="checkbox">
 											<span class="filter__manufacturer-country-check filter-check"></span>
-											Китай
+											Голландия
 										</label>
-										<label>
-											<input class="filter__manufacturer-country-input filter-input"
-												type="checkbox">
-											<span class="filter__manufacturer-country-check filter-check"></span>
-											Непал
-										</label>
-										<label>
-											<input class="filter__manufacturer-country-input filter-input"
-												type="checkbox">
-											<span class="filter__manufacturer-country-check filter-check"></span>
-											Нидерланды
-										</label>
-										<label>
-											<input class="filter__manufacturer-country-input filter-input"
-												type="checkbox">
-											<span class="filter__manufacturer-country-check filter-check"></span>
-											Норвегия
-										</label>
-										<label>
-											<input class="filter__manufacturer-country-input filter-input"
-												type="checkbox">
-											<span class="filter__manufacturer-country-check filter-check"></span>
-											Объеднинённые Арабские Эмираты
-										</label>
-										<label>
-											<input class="filter__manufacturer-country-input filter-input"
-												type="checkbox">
-											<span class="filter__manufacturer-country-check filter-check"></span>
-											Польша
-										</label>
-										<label>
-											<input class="filter__manufacturer-country-input filter-input"
-												type="checkbox">
-											<span class="filter__manufacturer-country-check filter-check"></span>
-											Россия
-										</label>
-										<label>
-											<input class="filter__manufacturer-country-input filter-input"
-												type="checkbox">
-											<span class="filter__manufacturer-country-check filter-check"></span>
-											США
-										</label>
-										<label>
-											<input class="filter__manufacturer-country-input filter-input"
-												type="checkbox">
-											<span class="filter__manufacturer-country-check filter-check"></span>
-											Таиланд
-										</label>
-										<label>
-											<input class="filter__manufacturer-country-input filter-input"
-												type="checkbox">
-											<span class="filter__manufacturer-country-check filter-check"></span>
-											Тайвань
-										</label>
-										<label>
-											<input class="filter__manufacturer-country-input filter-input"
-												type="checkbox">
-											<span class="filter__manufacturer-country-check filter-check"></span>
-											Турция
-										</label>
-										<label>
-											<input class="filter__manufacturer-country-input filter-input"
-												type="checkbox">
-											<span class="filter__manufacturer-country-check filter-check"></span>
-											Украина
-										</label>
-										<label>
-											<input class="filter__manufacturer-country-input filter-input"
-												type="checkbox">
-											<span class="filter__manufacturer-country-check filter-check"></span>
-											Франция
-										</label>
-										<label>
-											<input class="filter__manufacturer-country-input filter-input"
-												type="checkbox">
-											<span class="filter__manufacturer-country-check filter-check"></span>
-											Чехия
-										</label>
-										<label>
-											<input class="filter__manufacturer-country-input filter-input"
-												type="checkbox">
-											<span class="filter__manufacturer-country-check filter-check"></span>
-											ЮАР
-										</label>
-										<label>
-											<input class="filter__manufacturer-country-input filter-input"
-												type="checkbox">
-											<span class="filter__manufacturer-country-check filter-check"></span>
-											Южная Корея
-										</label>
-									</span>
-									<button onclick="moreManufacturerCont()" id="moreManufacturerContBtn">Показать
-										больше</button>
+										<span id="dotsManufacturerCont"></span>
+										<span id="lookMoreManufacturerCont">
+											<label>
+												<input class="filter__manufacturer-country-input filter-input"
+													type="checkbox">
+												<span class="filter__manufacturer-country-check filter-check"></span>
+												Гонконг
+											</label>
+											<label>
+												<input class="filter__manufacturer-country-input filter-input"
+													type="checkbox">
+												<span class="filter__manufacturer-country-check filter-check"></span>
+												Индия
+											</label>
+											<label>
+												<input class="filter__manufacturer-country-input filter-input"
+													type="checkbox">
+												<span class="filter__manufacturer-country-check filter-check"></span>
+												Индонезия
+											</label>
+											<label>
+												<input class="filter__manufacturer-country-input filter-input"
+													type="checkbox">
+												<span class="filter__manufacturer-country-check filter-check"></span>
+												Иран
+											</label>
+											<label>
+												<input class="filter__manufacturer-country-input filter-input"
+													type="checkbox">
+												<span class="filter__manufacturer-country-check filter-check"></span>
+												Италия
+											</label>
+											<label>
+												<input class="filter__manufacturer-country-input filter-input"
+													type="checkbox">
+												<span class="filter__manufacturer-country-check filter-check"></span>
+												Китай
+											</label>
+											<label>
+												<input class="filter__manufacturer-country-input filter-input"
+													type="checkbox">
+												<span class="filter__manufacturer-country-check filter-check"></span>
+												Непал
+											</label>
+											<label>
+												<input class="filter__manufacturer-country-input filter-input"
+													type="checkbox">
+												<span class="filter__manufacturer-country-check filter-check"></span>
+												Нидерланды
+											</label>
+											<label>
+												<input class="filter__manufacturer-country-input filter-input"
+													type="checkbox">
+												<span class="filter__manufacturer-country-check filter-check"></span>
+												Норвегия
+											</label>
+											<label>
+												<input class="filter__manufacturer-country-input filter-input"
+													type="checkbox">
+												<span class="filter__manufacturer-country-check filter-check"></span>
+												Объеднинённые Арабские Эмираты
+											</label>
+											<label>
+												<input class="filter__manufacturer-country-input filter-input"
+													type="checkbox">
+												<span class="filter__manufacturer-country-check filter-check"></span>
+												Польша
+											</label>
+											<label>
+												<input class="filter__manufacturer-country-input filter-input"
+													type="checkbox">
+												<span class="filter__manufacturer-country-check filter-check"></span>
+												Россия
+											</label>
+											<label>
+												<input class="filter__manufacturer-country-input filter-input"
+													type="checkbox">
+												<span class="filter__manufacturer-country-check filter-check"></span>
+												США
+											</label>
+											<label>
+												<input class="filter__manufacturer-country-input filter-input"
+													type="checkbox">
+												<span class="filter__manufacturer-country-check filter-check"></span>
+												Таиланд
+											</label>
+											<label>
+												<input class="filter__manufacturer-country-input filter-input"
+													type="checkbox">
+												<span class="filter__manufacturer-country-check filter-check"></span>
+												Тайвань
+											</label>
+											<label>
+												<input class="filter__manufacturer-country-input filter-input"
+													type="checkbox">
+												<span class="filter__manufacturer-country-check filter-check"></span>
+												Турция
+											</label>
+											<label>
+												<input class="filter__manufacturer-country-input filter-input"
+													type="checkbox">
+												<span class="filter__manufacturer-country-check filter-check"></span>
+												Украина
+											</label>
+											<label>
+												<input class="filter__manufacturer-country-input filter-input"
+													type="checkbox">
+												<span class="filter__manufacturer-country-check filter-check"></span>
+												Франция
+											</label>
+											<label>
+												<input class="filter__manufacturer-country-input filter-input"
+													type="checkbox">
+												<span class="filter__manufacturer-country-check filter-check"></span>
+												Чехия
+											</label>
+											<label>
+												<input class="filter__manufacturer-country-input filter-input"
+													type="checkbox">
+												<span class="filter__manufacturer-country-check filter-check"></span>
+												ЮАР
+											</label>
+											<label>
+												<input class="filter__manufacturer-country-input filter-input"
+													type="checkbox">
+												<span class="filter__manufacturer-country-check filter-check"></span>
+												Южная Корея
+											</label>
+										</span>
+										<button onclick="moreManufacturerCont()" id="moreManufacturerContBtn">Показать
+											больше</button>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="filter__item">
-							<div class="filter__color">
-								<h5 class="filter__color-title filter-title">Цвет</h5>
-								<div class="filter__color-list filter-list" id="colorFilt">
-									<input type="text" placeholder="Искать..." id="searchColorFilt"
-										onkeyup="searchColorFunction()">
-									<label>
-										<input class="filter__color filter-input" type="checkbox">
-										<span class="filter__color-check filter-check"></span>
-										Бежевый
-									</label>
-									<label>
-										<input class="filter__color filter-input" type="checkbox">
-										<span class="filter__color-check filter-check"></span>
-										Без цвета
-									</label>
-									<label>
-										<input class="filter__color filter-input" type="checkbox">
-										<span class="filter__color-check filter-check"></span>
-										Белый
-									</label>
-									<label>
-										<input class="filter__color filter-input" type="checkbox">
-										<span class="filter__color-check filter-check"></span>
-										Голубой
-									</label>
-									<label>
-										<input class="filter__color filter-input" type="checkbox">
-										<span class="filter__color-check filter-check"></span>
-										Желтый
-									</label>
-									<label>
-										<input class="filter__color filter-input" type="checkbox">
-										<span class="filter__color-check filter-check"></span>
-										Зелёный
-									</label>
-									<span id="dotsColor"></span>
-									<span id="lookMoreColor">
+							<div class="filter__item">
+								<div class="filter__color">
+									<h5 class="filter__color-title filter-title">Цвет</h5>
+									<div class="filter__color-list filter-list" id="colorFilt">
+										<input type="text" placeholder="Искать..." id="searchColorFilt"
+											onkeyup="searchColorFunction()">
 										<label>
 											<input class="filter__color filter-input" type="checkbox">
 											<span class="filter__color-check filter-check"></span>
-											Коричневый
+											Бежевый
 										</label>
 										<label>
 											<input class="filter__color filter-input" type="checkbox">
 											<span class="filter__color-check filter-check"></span>
-											Красный
+											Без цвета
 										</label>
 										<label>
 											<input class="filter__color filter-input" type="checkbox">
 											<span class="filter__color-check filter-check"></span>
-											Кремовый
+											Белый
 										</label>
 										<label>
 											<input class="filter__color filter-input" type="checkbox">
 											<span class="filter__color-check filter-check"></span>
-											Малиновый
+											Голубой
 										</label>
 										<label>
 											<input class="filter__color filter-input" type="checkbox">
 											<span class="filter__color-check filter-check"></span>
-											Оранжевый
+											Желтый
 										</label>
 										<label>
 											<input class="filter__color filter-input" type="checkbox">
 											<span class="filter__color-check filter-check"></span>
-											Разные цвета
+											Зелёный
 										</label>
-										<label>
-											<input class="filter__color filter-input" type="checkbox">
-											<span class="filter__color-check filter-check"></span>
-											Розовый
-										</label>
-										<label>
-											<input class="filter__color filter-input" type="checkbox">
-											<span class="filter__color-check filter-check"></span>
-											Серый
-										</label>
-										<label>
-											<input class="filter__color filter-input" type="checkbox">
-											<span class="filter__color-check filter-check"></span>
-											Синий
-										</label>
-										<label>
-											<input class="filter__color filter-input" type="checkbox">
-											<span class="filter__color-check filter-check"></span>
-											Сиреневый
-										</label>
-										<label>
-											<input class="filter__color filter-input" type="checkbox">
-											<span class="filter__color-check filter-check"></span>
-											Темно-синий
-										</label>
-										<label>
-											<input class="filter__color filter-input" type="checkbox">
-											<span class="filter__color-check filter-check"></span>
-											Терракотовый
-										</label>
-										<label>
-											<input class="filter__color filter-input" type="checkbox">
-											<span class="filter__color-check filter-check"></span>
-											Фиолетовый
-										</label>
-										<label>
-											<input class="filter__color filter-input" type="checkbox">
-											<span class="filter__color-check filter-check"></span>
-											Черный
-										</label>
-									</span>
-									<button onclick="moreColor()" id="moreColorBtn">Показать
-										больше</button>
+										<span id="dotsColor"></span>
+										<span id="lookMoreColor">
+											<label>
+												<input class="filter__color filter-input" type="checkbox">
+												<span class="filter__color-check filter-check"></span>
+												Коричневый
+											</label>
+											<label>
+												<input class="filter__color filter-input" type="checkbox">
+												<span class="filter__color-check filter-check"></span>
+												Красный
+											</label>
+											<label>
+												<input class="filter__color filter-input" type="checkbox">
+												<span class="filter__color-check filter-check"></span>
+												Кремовый
+											</label>
+											<label>
+												<input class="filter__color filter-input" type="checkbox">
+												<span class="filter__color-check filter-check"></span>
+												Малиновый
+											</label>
+											<label>
+												<input class="filter__color filter-input" type="checkbox">
+												<span class="filter__color-check filter-check"></span>
+												Оранжевый
+											</label>
+											<label>
+												<input class="filter__color filter-input" type="checkbox">
+												<span class="filter__color-check filter-check"></span>
+												Разные цвета
+											</label>
+											<label>
+												<input class="filter__color filter-input" type="checkbox">
+												<span class="filter__color-check filter-check"></span>
+												Розовый
+											</label>
+											<label>
+												<input class="filter__color filter-input" type="checkbox">
+												<span class="filter__color-check filter-check"></span>
+												Серый
+											</label>
+											<label>
+												<input class="filter__color filter-input" type="checkbox">
+												<span class="filter__color-check filter-check"></span>
+												Синий
+											</label>
+											<label>
+												<input class="filter__color filter-input" type="checkbox">
+												<span class="filter__color-check filter-check"></span>
+												Сиреневый
+											</label>
+											<label>
+												<input class="filter__color filter-input" type="checkbox">
+												<span class="filter__color-check filter-check"></span>
+												Темно-синий
+											</label>
+											<label>
+												<input class="filter__color filter-input" type="checkbox">
+												<span class="filter__color-check filter-check"></span>
+												Терракотовый
+											</label>
+											<label>
+												<input class="filter__color filter-input" type="checkbox">
+												<span class="filter__color-check filter-check"></span>
+												Фиолетовый
+											</label>
+											<label>
+												<input class="filter__color filter-input" type="checkbox">
+												<span class="filter__color-check filter-check"></span>
+												Черный
+											</label>
+										</span>
+										<button onclick="moreColor()" id="moreColorBtn">Показать
+											больше</button>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="filter__item">
-							<div class="filter__diameter">
-								<h5 class="filter__diameter-title filter-title">Диаметр, см</h5>
-								<div class="filter__diameter-list filter-list">
-									<form class="filter__diameter-form" action="#">
-										<div class="filter__diameter-box">
-											<input class="filter__diameter-input filter-input" id="diameterFrom"
-												type="text" placeholder="0">
-											<input class="filter__diameter-input filter-input" id="diameterTo"
-												type="text" placeholder="50">
-											<button class="filter__diameter-btn filter-form-btn"
-												type="submit">Ок</button>
-										</div>
-										<label>
-											<input class="filter__diameter-radio filter-radio" type="radio"
-												name="radioDiameter" data-diameter-from="0" data-diameter-to="9">
-											0 - 9 см
-										</label>
-										<label>
-											<input class="filter__diameter-radio filter-radio" type="radio"
-												name="radioDiameter" data-diameter-from="10" data-diameter-to="19">
-											10 - 19 см
-										</label>
-										<label>
-											<input class="filter__diameter-radio filter-radio" type="radio"
-												name="radioDiameter" data-diameter-from="20" data-diameter-to="29">
-											20 - 29 см
-										</label>
-										<label>
-											<input class="filter__diameter-radio filter-radio" type="radio"
-												name="radioDiameter" data-diameter-from="30" data-diameter-to="39">
-											30 - 39 см
-										</label>
-										<label>
-											<input class="filter__diameter-radio filter-radio" type="radio"
-												name="radioDiameter" data-diameter-from="40" data-diameter-to="50">
-											40 - 50 см
-										</label>
-									</form>
+							<div class="filter__item">
+								<div class="filter__diameter">
+									<h5 class="filter__diameter-title filter-title">Диаметр, см</h5>
+									<div class="filter__diameter-list filter-list">
+										<form class="filter__diameter-form" action="#">
+											<div class="filter__diameter-box">
+												<input class="filter__diameter-input filter-input" id="diameterFrom"
+													type="text" placeholder="0">
+												<input class="filter__diameter-input filter-input" id="diameterTo"
+													type="text" placeholder="50">
+												<button class="filter__diameter-btn filter-form-btn"
+													type="submit">Ок</button>
+											</div>
+											<label>
+												<input class="filter__diameter-radio filter-radio" type="radio"
+													name="radioDiameter" data-diameter-from="0" data-diameter-to="9">
+												0 - 9 см
+											</label>
+											<label>
+												<input class="filter__diameter-radio filter-radio" type="radio"
+													name="radioDiameter" data-diameter-from="10" data-diameter-to="19">
+												10 - 19 см
+											</label>
+											<label>
+												<input class="filter__diameter-radio filter-radio" type="radio"
+													name="radioDiameter" data-diameter-from="20" data-diameter-to="29">
+												20 - 29 см
+											</label>
+											<label>
+												<input class="filter__diameter-radio filter-radio" type="radio"
+													name="radioDiameter" data-diameter-from="30" data-diameter-to="39">
+												30 - 39 см
+											</label>
+											<label>
+												<input class="filter__diameter-radio filter-radio" type="radio"
+													name="radioDiameter" data-diameter-from="40" data-diameter-to="50">
+												40 - 50 см
+											</label>
+										</form>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="filter__item">
-							<div class="filter__total-length">
-								<h5 class="filter__total-length-title filter-title">Общая высота, см</h5>
-								<div class="filter__total-length-list filter-list">
-									<form class="filter__total-length-form" action="#">
-										<div class="filter__total-length-box">
-											<input class="filter__total-length-input filter-input" id="totLengFrom"
-												placeholder="0" type="text">
-											<input class="filter__total-length-input filter-input" id="totLengTo"
-												placeholder="300" type="text">
-											<button class="filter__total-length-btn filter-form-btn"
-												type="submit">Ок</button>
-										</div>
-										<label>
-											<input class="filter__total-length-radio filter-radio" type="radio"
-												name="radioHeight" data-totLeng-from="0" data-totLeng-to="59">
-											0 - 59 см
-										</label>
-										<label>
-											<input class="filter__total-length-radio filter-radio" type="radio"
-												name="radioHeight" data-totLeng-from="60" data-totLeng-to="119">
-											60 - 119 см
-										</label>
-										<label>
-											<input class="filter__total-length-radio filter-radio" type="radio"
-												name="radioHeight" data-totLeng-from="120" data-totLeng-to="179">
-											120 - 179 см
-										</label>
-										<label>
-											<input class="filter__total-length-radio filter-radio" type="radio"
-												name="radioHeight" data-totLeng-from="180" data-totLeng-to="239">
-											180 - 239 см
-										</label>
-										<label>
-											<input class="filter__total-length-radio filter-radio" type="radio"
-												name="radioHeight" data-totLeng-from="240" data-totLeng-to="300	">
-											240 - 300 см
-										</label>
-									</form>
+							<div class="filter__item">
+								<div class="filter__total-length">
+									<h5 class="filter__total-length-title filter-title">Общая высота, см</h5>
+									<div class="filter__total-length-list filter-list">
+										<form class="filter__total-length-form" action="#">
+											<div class="filter__total-length-box">
+												<input class="filter__total-length-input filter-input" id="totLengFrom"
+													placeholder="0" type="text">
+												<input class="filter__total-length-input filter-input" id="totLengTo"
+													placeholder="300" type="text">
+												<button class="filter__total-length-btn filter-form-btn"
+													type="submit">Ок</button>
+											</div>
+											<label>
+												<input class="filter__total-length-radio filter-radio" type="radio"
+													name="radioHeight" data-totLeng-from="0" data-totLeng-to="59">
+												0 - 59 см
+											</label>
+											<label>
+												<input class="filter__total-length-radio filter-radio" type="radio"
+													name="radioHeight" data-totLeng-from="60" data-totLeng-to="119">
+												60 - 119 см
+											</label>
+											<label>
+												<input class="filter__total-length-radio filter-radio" type="radio"
+													name="radioHeight" data-totLeng-from="120" data-totLeng-to="179">
+												120 - 179 см
+											</label>
+											<label>
+												<input class="filter__total-length-radio filter-radio" type="radio"
+													name="radioHeight" data-totLeng-from="180" data-totLeng-to="239">
+												180 - 239 см
+											</label>
+											<label>
+												<input class="filter__total-length-radio filter-radio" type="radio"
+													name="radioHeight" data-totLeng-from="240" data-totLeng-to="300	">
+												240 - 300 см
+											</label>
+										</form>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -1147,6 +1155,6 @@
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="js/ion-rangeslider/ion.rangeSlider.min.js"></script>
+<script src="js/ion.rangeSlider.js"></script>
 <script src="js/main.js"></script>
 </body>

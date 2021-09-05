@@ -11,8 +11,8 @@ let path = {
 	},
 	app: {
 		html: [appFolder + "/**/*.html", "!" + appFolder + "/**/_*.html"],
-		css: appFolder + "/scss/style.scss",
-		js: appFolder + "/js/main.js",
+		css: [appFolder + "/css/ion.rangeSlider.css", appFolder + "/scss/style.scss"],
+		js: [appFolder + "/js/ion-rangeslider/ion.rangeSlider.js", appFolder + "/js/main.js"],
 		img: appFolder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
 		fonts: appFolder + "/fonts/*.ttf",
 	},

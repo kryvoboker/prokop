@@ -3,10 +3,37 @@
 	min-height: 500px;
 	height: 100%;
 
+	&__inner {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(9, auto);
+		row-gap: 20px;
+	}
+	&__sort-list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__sort-btn {
+		border-radius: 5px;
+		box-shadow: 0 0 2px 2px;
+		// background-color: rgba(243, 243, 243, 0.808);
+		background-color: rgb(78 247 255 / 81%);
+		transition: all .5s;
+		padding: 10px 15px;
+		margin: 5px;
+
+		&.active {
+			background-color: #fff;
+		}
+	}
+
 	& label {
 		display: block;
 	}
 }
+
+
+
 #lookMoreManufacturerCont,
 #lookMoreManufacturer,
 #lookMoreColor {display: none;}
