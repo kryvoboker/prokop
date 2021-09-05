@@ -277,6 +277,11 @@ body {
   margin: 50px 0;
 }
 
+.range-slider {
+  position: relative;
+  height: 80px;
+}
+
 .burger-box {
   position: relative;
   display: none;
@@ -887,11 +892,6 @@ body {
 
 .filter label {
   display: block;
-}
-
-.range-slider {
-  position: relative;
-  height: 80px;
 }
 
 .main-cat__inner {

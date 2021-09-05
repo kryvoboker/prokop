@@ -8,4 +8,7 @@
 
 //====================================subCat-page=======================
 @@include('./ion-rangeslider/ionScript.js')
+@@include('./totalLengthFilter/totalLengthFilter.js')
+@@include('./diameterFilter/diameterFilter.js')
+@@include('./searchFilter/searchFilter.js')
 //====================================subCat-page=======================
