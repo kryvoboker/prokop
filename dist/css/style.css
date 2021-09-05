@@ -894,6 +894,12 @@ body {
   display: block;
 }
 
+#lookMoreManufacturerCont,
+#lookMoreManufacturer,
+#lookMoreColor {
+  display: none;
+}
+
 .main-cat__inner {
   display: grid;
   grid-template-columns: repeat(4, minmax(100px, 250px));

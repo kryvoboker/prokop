@@ -357,21 +357,26 @@
 										<span class="filter__manufacturer-check filter-check"></span>
 										Intex
 									</label>
-									<label>
-										<input class="filter__manufacturer-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-check filter-check"></span>
-										Bestway
-									</label>
-									<label>
-										<input class="filter__manufacturer-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-check filter-check"></span>
-										GRAND
-									</label>
-									<label>
-										<input class="filter__manufacturer-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-check filter-check"></span>
-										Maestro
-									</label>
+									<span id="dotsManufacturer"></span>
+									<span id="lookMoreManufacturer">
+										<label>
+											<input class="filter__manufacturer-input filter-input" type="checkbox">
+											<span class="filter__manufacturer-check filter-check"></span>
+											Bestway
+										</label>
+										<label>
+											<input class="filter__manufacturer-input filter-input" type="checkbox">
+											<span class="filter__manufacturer-check filter-check"></span>
+											GRAND
+										</label>
+										<label>
+											<input class="filter__manufacturer-input filter-input" type="checkbox">
+											<span class="filter__manufacturer-check filter-check"></span>
+											Maestro
+										</label>
+									</span>
+									<button onclick="moreManufacturer()" id="moreManufacturerBtn">Показать
+										больше</button>
 								</div>
 							</div>
 						</div>
@@ -478,111 +483,137 @@
 										<span class="filter__manufacturer-country-check filter-check"></span>
 										Голландия
 									</label>
-									<label>
-										<input class="filter__manufacturer-country-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-country-check filter-check"></span>
-										Гонконг
-									</label>
-									<label>
-										<input class="filter__manufacturer-country-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-country-check filter-check"></span>
-										Индия
-									</label>
-									<label>
-										<input class="filter__manufacturer-country-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-country-check filter-check"></span>
-										Индонезия
-									</label>
-									<label>
-										<input class="filter__manufacturer-country-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-country-check filter-check"></span>
-										Иран
-									</label>
-									<label>
-										<input class="filter__manufacturer-country-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-country-check filter-check"></span>
-										Италия
-									</label>
-									<label>
-										<input class="filter__manufacturer-country-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-country-check filter-check"></span>
-										Китай
-									</label>
-									<label>
-										<input class="filter__manufacturer-country-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-country-check filter-check"></span>
-										Непал
-									</label>
-									<label>
-										<input class="filter__manufacturer-country-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-country-check filter-check"></span>
-										Нидерланды
-									</label>
-									<label>
-										<input class="filter__manufacturer-country-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-country-check filter-check"></span>
-										Норвегия
-									</label>
-									<label>
-										<input class="filter__manufacturer-country-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-country-check filter-check"></span>
-										Объеднинённые Арабские Эмираты
-									</label>
-									<label>
-										<input class="filter__manufacturer-country-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-country-check filter-check"></span>
-										Польша
-									</label>
-									<label>
-										<input class="filter__manufacturer-country-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-country-check filter-check"></span>
-										Россия
-									</label>
-									<label>
-										<input class="filter__manufacturer-country-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-country-check filter-check"></span>
-										США
-									</label>
-									<label>
-										<input class="filter__manufacturer-country-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-country-check filter-check"></span>
-										Таиланд
-									</label>
-									<label>
-										<input class="filter__manufacturer-country-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-country-check filter-check"></span>
-										Тайвань
-									</label>
-									<label>
-										<input class="filter__manufacturer-country-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-country-check filter-check"></span>
-										Турция
-									</label>
-									<label>
-										<input class="filter__manufacturer-country-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-country-check filter-check"></span>
-										Украина
-									</label>
-									<label>
-										<input class="filter__manufacturer-country-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-country-check filter-check"></span>
-										Франция
-									</label>
-									<label>
-										<input class="filter__manufacturer-country-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-country-check filter-check"></span>
-										Чехия
-									</label>
-									<label>
-										<input class="filter__manufacturer-country-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-country-check filter-check"></span>
-										ЮАР
-									</label>
-									<label>
-										<input class="filter__manufacturer-country-input filter-input" type="checkbox">
-										<span class="filter__manufacturer-country-check filter-check"></span>
-										Южная Корея
-									</label>
+									<span id="dotsManufacturerCont"></span>
+									<span id="lookMoreManufacturerCont">
+										<label>
+											<input class="filter__manufacturer-country-input filter-input"
+												type="checkbox">
+											<span class="filter__manufacturer-country-check filter-check"></span>
+											Гонконг
+										</label>
+										<label>
+											<input class="filter__manufacturer-country-input filter-input"
+												type="checkbox">
+											<span class="filter__manufacturer-country-check filter-check"></span>
+											Индия
+										</label>
+										<label>
+											<input class="filter__manufacturer-country-input filter-input"
+												type="checkbox">
+											<span class="filter__manufacturer-country-check filter-check"></span>
+											Индонезия
+										</label>
+										<label>
+											<input class="filter__manufacturer-country-input filter-input"
+												type="checkbox">
+											<span class="filter__manufacturer-country-check filter-check"></span>
+											Иран
+										</label>
+										<label>
+											<input class="filter__manufacturer-country-input filter-input"
+												type="checkbox">
+											<span class="filter__manufacturer-country-check filter-check"></span>
+											Италия
+										</label>
+										<label>
+											<input class="filter__manufacturer-country-input filter-input"
+												type="checkbox">
+											<span class="filter__manufacturer-country-check filter-check"></span>
+											Китай
+										</label>
+										<label>
+											<input class="filter__manufacturer-country-input filter-input"
+												type="checkbox">
+											<span class="filter__manufacturer-country-check filter-check"></span>
+											Непал
+										</label>
+										<label>
+											<input class="filter__manufacturer-country-input filter-input"
+												type="checkbox">
+											<span class="filter__manufacturer-country-check filter-check"></span>
+											Нидерланды
+										</label>
+										<label>
+											<input class="filter__manufacturer-country-input filter-input"
+												type="checkbox">
+											<span class="filter__manufacturer-country-check filter-check"></span>
+											Норвегия
+										</label>
+										<label>
+											<input class="filter__manufacturer-country-input filter-input"
+												type="checkbox">
+											<span class="filter__manufacturer-country-check filter-check"></span>
+											Объеднинённые Арабские Эмираты
+										</label>
+										<label>
+											<input class="filter__manufacturer-country-input filter-input"
+												type="checkbox">
+											<span class="filter__manufacturer-country-check filter-check"></span>
+											Польша
+										</label>
+										<label>
+											<input class="filter__manufacturer-country-input filter-input"
+												type="checkbox">
+											<span class="filter__manufacturer-country-check filter-check"></span>
+											Россия
+										</label>
+										<label>
+											<input class="filter__manufacturer-country-input filter-input"
+												type="checkbox">
+											<span class="filter__manufacturer-country-check filter-check"></span>
+											США
+										</label>
+										<label>
+											<input class="filter__manufacturer-country-input filter-input"
+												type="checkbox">
+											<span class="filter__manufacturer-country-check filter-check"></span>
+											Таиланд
+										</label>
+										<label>
+											<input class="filter__manufacturer-country-input filter-input"
+												type="checkbox">
+											<span class="filter__manufacturer-country-check filter-check"></span>
+											Тайвань
+										</label>
+										<label>
+											<input class="filter__manufacturer-country-input filter-input"
+												type="checkbox">
+											<span class="filter__manufacturer-country-check filter-check"></span>
+											Турция
+										</label>
+										<label>
+											<input class="filter__manufacturer-country-input filter-input"
+												type="checkbox">
+											<span class="filter__manufacturer-country-check filter-check"></span>
+											Украина
+										</label>
+										<label>
+											<input class="filter__manufacturer-country-input filter-input"
+												type="checkbox">
+											<span class="filter__manufacturer-country-check filter-check"></span>
+											Франция
+										</label>
+										<label>
+											<input class="filter__manufacturer-country-input filter-input"
+												type="checkbox">
+											<span class="filter__manufacturer-country-check filter-check"></span>
+											Чехия
+										</label>
+										<label>
+											<input class="filter__manufacturer-country-input filter-input"
+												type="checkbox">
+											<span class="filter__manufacturer-country-check filter-check"></span>
+											ЮАР
+										</label>
+										<label>
+											<input class="filter__manufacturer-country-input filter-input"
+												type="checkbox">
+											<span class="filter__manufacturer-country-check filter-check"></span>
+											Южная Корея
+										</label>
+									</span>
+									<button onclick="moreManufacturerCont()" id="moreManufacturerContBtn">Показать
+										больше</button>
 								</div>
 							</div>
 						</div>
@@ -622,76 +653,81 @@
 										<span class="filter__color-check filter-check"></span>
 										Зелёный
 									</label>
-									<label>
-										<input class="filter__color filter-input" type="checkbox">
-										<span class="filter__color-check filter-check"></span>
-										Коричневый
-									</label>
-									<label>
-										<input class="filter__color filter-input" type="checkbox">
-										<span class="filter__color-check filter-check"></span>
-										Красный
-									</label>
-									<label>
-										<input class="filter__color filter-input" type="checkbox">
-										<span class="filter__color-check filter-check"></span>
-										Кремовый
-									</label>
-									<label>
-										<input class="filter__color filter-input" type="checkbox">
-										<span class="filter__color-check filter-check"></span>
-										Малиновый
-									</label>
-									<label>
-										<input class="filter__color filter-input" type="checkbox">
-										<span class="filter__color-check filter-check"></span>
-										Оранжевый
-									</label>
-									<label>
-										<input class="filter__color filter-input" type="checkbox">
-										<span class="filter__color-check filter-check"></span>
-										Разные цвета
-									</label>
-									<label>
-										<input class="filter__color filter-input" type="checkbox">
-										<span class="filter__color-check filter-check"></span>
-										Розовый
-									</label>
-									<label>
-										<input class="filter__color filter-input" type="checkbox">
-										<span class="filter__color-check filter-check"></span>
-										Серый
-									</label>
-									<label>
-										<input class="filter__color filter-input" type="checkbox">
-										<span class="filter__color-check filter-check"></span>
-										Синий
-									</label>
-									<label>
-										<input class="filter__color filter-input" type="checkbox">
-										<span class="filter__color-check filter-check"></span>
-										Сиреневый
-									</label>
-									<label>
-										<input class="filter__color filter-input" type="checkbox">
-										<span class="filter__color-check filter-check"></span>
-										Темно-синий
-									</label>
-									<label>
-										<input class="filter__color filter-input" type="checkbox">
-										<span class="filter__color-check filter-check"></span>
-										Терракотовый
-									</label>
-									<label>
-										<input class="filter__color filter-input" type="checkbox">
-										<span class="filter__color-check filter-check"></span>
-										Фиолетовый
-									</label>
-									<label>
-										<input class="filter__color filter-input" type="checkbox">
-										<span class="filter__color-check filter-check"></span>
-										Черный
-									</label>
+									<span id="dotsColor"></span>
+									<span id="lookMoreColor">
+										<label>
+											<input class="filter__color filter-input" type="checkbox">
+											<span class="filter__color-check filter-check"></span>
+											Коричневый
+										</label>
+										<label>
+											<input class="filter__color filter-input" type="checkbox">
+											<span class="filter__color-check filter-check"></span>
+											Красный
+										</label>
+										<label>
+											<input class="filter__color filter-input" type="checkbox">
+											<span class="filter__color-check filter-check"></span>
+											Кремовый
+										</label>
+										<label>
+											<input class="filter__color filter-input" type="checkbox">
+											<span class="filter__color-check filter-check"></span>
+											Малиновый
+										</label>
+										<label>
+											<input class="filter__color filter-input" type="checkbox">
+											<span class="filter__color-check filter-check"></span>
+											Оранжевый
+										</label>
+										<label>
+											<input class="filter__color filter-input" type="checkbox">
+											<span class="filter__color-check filter-check"></span>
+											Разные цвета
+										</label>
+										<label>
+											<input class="filter__color filter-input" type="checkbox">
+											<span class="filter__color-check filter-check"></span>
+											Розовый
+										</label>
+										<label>
+											<input class="filter__color filter-input" type="checkbox">
+											<span class="filter__color-check filter-check"></span>
+											Серый
+										</label>
+										<label>
+											<input class="filter__color filter-input" type="checkbox">
+											<span class="filter__color-check filter-check"></span>
+											Синий
+										</label>
+										<label>
+											<input class="filter__color filter-input" type="checkbox">
+											<span class="filter__color-check filter-check"></span>
+											Сиреневый
+										</label>
+										<label>
+											<input class="filter__color filter-input" type="checkbox">
+											<span class="filter__color-check filter-check"></span>
+											Темно-синий
+										</label>
+										<label>
+											<input class="filter__color filter-input" type="checkbox">
+											<span class="filter__color-check filter-check"></span>
+											Терракотовый
+										</label>
+										<label>
+											<input class="filter__color filter-input" type="checkbox">
+											<span class="filter__color-check filter-check"></span>
+											Фиолетовый
+										</label>
+										<label>
+											<input class="filter__color filter-input" type="checkbox">
+											<span class="filter__color-check filter-check"></span>
+											Черный
+										</label>
+									</span>
+									<button onclick="moreColor()" id="moreColorBtn">Показать
+										больше</button>
 								</div>
 							</div>
 						</div>
