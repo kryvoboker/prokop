@@ -1,5 +1,7 @@
 .filter {
-	border: 1px solid #000;
+	// border: 1px solid #000;
+	// border-right: 2px solid #000;
+	box-shadow: 0 0 5px 4px;
 	min-height: 500px;
 	height: 100%;
 
@@ -13,27 +15,14 @@
 		display: flex;
 		flex-wrap: wrap;
 	}
-	&__sort-btn {
-		border-radius: 5px;
-		box-shadow: 0 0 2px 2px;
-		// background-color: rgba(243, 243, 243, 0.808);
-		background-color: rgb(78 247 255 / 81%);
-		transition: all .5s;
-		padding: 10px 15px;
-		margin: 5px;
-
-		&.active {
-			background-color: #fff;
-		}
-	}
-
 	& label {
 		display: block;
+		line-height: 20px;
+		margin-bottom: 10px;
 	}
 }
-
-
-
 #lookMoreManufacturerCont,
 #lookMoreManufacturer,
-#lookMoreColor {display: none;}
+#lookMoreColor {
+	display: none;
+}

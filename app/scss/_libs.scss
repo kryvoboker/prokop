@@ -1,4 +1,34 @@
-.range-slider {
-	position: relative;
-	height: 80px;
+.filter__range-slider {
+	& .range-slider {
+		position: relative;
+		height: 82px;
+		margin-bottom: 20px;
+	}
+	& .extra-controls {
+		margin-bottom: 0;
+	}
+	& .irs-min,
+	& .irs-max,
+	& .irs-from,
+	& .irs-to {
+		font-size: 18px;
+	}
+	& .irs-min,
+	& .irs-max {
+		top: -24px;
+		border-radius: 5px;
+		box-shadow: 0 0 6px 1px #000;
+		visibility: visible !important;
+		padding: 10px;
+	}
+	& .filter__range-slider-title {
+		margin-bottom: 40px;
+	}
+	& .irs-from,
+	& .irs-to {
+		top: 50px;
+		letter-spacing: 1px;
+		border-radius: 5px;
+		padding: 7px;
+	}
 }

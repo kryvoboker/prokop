@@ -5,8 +5,14 @@
 			transform: scale(1);
 		}
 	}
-	.filter__sort-btn:hover {
+	.top-filter-btns:hover {
 		background-color: #fff;
+	}
+	.filter-more-btn:hover {
+		border-color: blue;
+	}
+	.filter-form-btn:hover {
+		box-shadow: 0 0 10px 0px #000;
 	}
 }
 

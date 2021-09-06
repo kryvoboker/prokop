@@ -1,9 +1,13 @@
+.main-cat-body {
+	box-shadow: 0 0 5px 4px;
+}
 .main-cat {
 	&__inner {
 		display: grid;
 		grid-template-columns: repeat(4, minmax(100px, 250px));
 		grid-template-rows: minmax(155px, auto);
 		grid-auto-flow: row;
+		justify-content: center;
 		column-gap: 10px;
 	}
 	&__item {

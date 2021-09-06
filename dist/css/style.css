@@ -192,7 +192,7 @@ body {
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   background-color: #f8f9fa;
 }
 
@@ -274,6 +274,9 @@ body {
   grid-template-columns: 300px 1fr;
   grid-template-rows: 1fr;
   height: 100%;
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
   margin: 50px 0;
 }
 
@@ -282,9 +285,164 @@ body {
   padding: 10px;
 }
 
-.range-slider {
+.filter-title {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.top-filter-btns {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 2px 2px;
+          box-shadow: 0 0 2px 2px;
+  background-color: rgba(78, 247, 255, 0.81);
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  padding: 10px 15px;
+  margin: 5px;
+}
+
+.top-filter-btns.active {
+  background-color: #fff;
+}
+
+.filter-search-input {
+  width: 100%;
+  font-size: 16px;
+  border: 3px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+}
+
+.filter-search-input:focus {
+  border-color: black;
+}
+
+.filter-input {
+  padding: 5px 10px;
+}
+
+.filter-more-btn {
   position: relative;
-  height: 80px;
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 0.5px;
+  color: blue;
+  border-bottom: 2px solid transparent;
+  background-color: transparent;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  padding: 3px;
+  margin: 0 auto;
+}
+
+.filter-more-btn::before {
+  position: absolute;
+  content: "";
+  top: 54%;
+  -webkit-transform: translate(0px, -50%);
+      -ms-transform: translate(0px, -50%);
+          transform: translate(0px, -50%);
+  right: -22px;
+  width: 17px;
+  height: 17px;
+  background-image: url("../img/icons/select.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 17px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.filter-more-btn.active::before {
+  -webkit-transform: translate(0px, -50%) rotate(180deg);
+      -ms-transform: translate(0px, -50%) rotate(180deg);
+          transform: translate(0px, -50%) rotate(180deg);
+}
+
+.filter__range-slider .extra-controls,
+.filter__diameter-box,
+.filter__total-length-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.filter-input-value {
+  width: 100px;
+  letter-spacing: 1px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+.filter-form-btn {
+  font-family: "Open Sans", sans-serif;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 255, 0.51);
+  -webkit-box-shadow: 0 0 0 0 transparent;
+          box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  padding: 10px;
+}
+
+.filter__range-slider .range-slider {
+  position: relative;
+  height: 82px;
+  margin-bottom: 20px;
+}
+
+.filter__range-slider .extra-controls {
+  margin-bottom: 0;
+}
+
+.filter__range-slider .irs-min,
+.filter__range-slider .irs-max,
+.filter__range-slider .irs-from,
+.filter__range-slider .irs-to {
+  font-size: 18px;
+}
+
+.filter__range-slider .irs-min,
+.filter__range-slider .irs-max {
+  top: -24px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 6px 1px #000;
+          box-shadow: 0 0 6px 1px #000;
+  visibility: visible !important;
+  padding: 10px;
+}
+
+.filter__range-slider .filter__range-slider-title {
+  margin-bottom: 40px;
+}
+
+.filter__range-slider .irs-from,
+.filter__range-slider .irs-to {
+  top: 50px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  padding: 7px;
 }
 
 .burger-box {
@@ -385,7 +543,7 @@ body {
 
 .header__top {
   display: grid;
-  grid-template-columns: 60px 150px minmax(60px, 1fr) auto;
+  grid-template-columns: 60px 165px minmax(60px, 1fr) auto;
   grid-template-rows: 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -484,8 +642,6 @@ body {
   display: none;
   position: absolute;
   top: 65px;
-  max-width: 150px;
-  width: 100%;
   min-height: 100px;
   background-color: #fff;
 }
@@ -529,8 +685,6 @@ body {
   position: absolute;
   top: 0;
   right: -200px;
-  max-width: 200px;
-  width: 100%;
   min-height: 100px;
   background-color: #fff;
 }
@@ -890,7 +1044,8 @@ body {
 }
 
 .filter {
-  border: 1px solid #000;
+  -webkit-box-shadow: 0 0 5px 4px;
+          box-shadow: 0 0 5px 4px;
   min-height: 500px;
   height: 100%;
 }
@@ -910,24 +1065,10 @@ body {
       flex-wrap: wrap;
 }
 
-.filter__sort-btn {
-  border-radius: 5px;
-  -webkit-box-shadow: 0 0 2px 2px;
-          box-shadow: 0 0 2px 2px;
-  background-color: rgba(78, 247, 255, 0.81);
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-  padding: 10px 15px;
-  margin: 5px;
-}
-
-.filter__sort-btn.active {
-  background-color: #fff;
-}
-
 .filter label {
   display: block;
+  line-height: 20px;
+  margin-bottom: 10px;
 }
 
 #lookMoreManufacturerCont,
@@ -936,11 +1077,19 @@ body {
   display: none;
 }
 
+.main-cat-body {
+  -webkit-box-shadow: 0 0 5px 4px;
+          box-shadow: 0 0 5px 4px;
+}
+
 .main-cat__inner {
   display: grid;
   grid-template-columns: repeat(4, minmax(100px, 250px));
   grid-template-rows: minmax(155px, auto);
   grid-auto-flow: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-column-gap: 10px;
      -moz-column-gap: 10px;
           column-gap: 10px;
@@ -1189,7 +1338,16 @@ body {
             transform: scale(1);
   }
 
-  .filter__sort-btn:hover {
+  .top-filter-btns:hover {
     background-color: #fff;
+  }
+
+  .filter-more-btn:hover {
+    border-color: blue;
+  }
+
+  .filter-form-btn:hover {
+    -webkit-box-shadow: 0 0 10px 0px #000;
+            box-shadow: 0 0 10px 0px #000;
   }
 }

@@ -9,7 +9,7 @@
 	}
 	&__top {
 		display: grid;
-		grid-template-columns: 60px 150px minmax(60px, 1fr) auto;
+		grid-template-columns: 60px 165px minmax(60px, 1fr) auto;
 		grid-template-rows: 30px;
 		align-items: center;
 		margin-bottom: 20px;
@@ -75,8 +75,8 @@
 
 		position: absolute;
 		top: 65px;
-		max-width: 150px;
-		width: 100%;
+		// max-width: 150px;
+		// width: 100%;
 		min-height: 100px;
 		background-color: #fff;
 
@@ -113,8 +113,8 @@
 		position: absolute;
 		top: 0;
 		right: -200px;
-		max-width: 200px;
-		width: 100%;
+		// max-width: 200px;
+		// width: 100%;
 		min-height: 100px;
 		background-color: #fff;
 	}

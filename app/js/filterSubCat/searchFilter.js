@@ -26,6 +26,7 @@ function searchManufFunction() {
 			dotsManufacturer.style.display = "none";
 			lookMoreManufacturer.style.display = "block";
 			moreManufacturerBtn.innerHTML = "Показать меньше";
+			moreManufacturerBtn.classList.add('active');
 		} else {
 			label[i].style.display = "none";
 		}
@@ -45,6 +46,7 @@ function searchColorFunction() {
 			dotsColor.style.display = "none";
 			lookMoreColor.style.display = "block";
 			moreColorBtn.innerHTML = "Показать меньше";
+			moreColorBtn.classList.add('active');
 		} else {
 			label[i].style.display = "none";
 		}
@@ -64,6 +66,7 @@ function searchManufacturerContFunction() {
 			dotsManufacturerCont.style.display = "none";
 			lookMoreManufacturerCont.style.display = "block";
 			moreManufacturerContBtn.innerHTML = "Показать меньше";
+			moreManufacturerContBtn.classList.add('active');
 		} else {
 			label[i].style.display = "none";
 		}
@@ -81,6 +84,7 @@ function moreManufacturerCont() {
 		moreManufacturerContBtn.innerHTML = "Показать меньше";
 		lookMoreManufacturerCont.style.display = "block";
 	}
+	moreManufacturerContBtn.classList.toggle('active');
 }
 
 // для кнопки по производителю
@@ -94,6 +98,7 @@ function moreManufacturer() {
 		moreManufacturerBtn.innerHTML = "Показать меньше";
 		lookMoreManufacturer.style.display = "block";
 	}
+	moreManufacturerBtn.classList.toggle('active');
 }
 
 // для кнопки по цвету
@@ -107,4 +112,5 @@ function moreColor() {
 		moreColorBtn.innerHTML = "Показать меньше";
 		lookMoreColor.style.display = "block";
 	}
+	moreColorBtn.classList.toggle('active');
 }
