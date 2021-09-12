@@ -4,17 +4,15 @@
 @import 'nullStyle';
 @import 'global';
 @import 'libs';
-@import 'hamburger';
+//====================================filter-button=====================
+@import 'filterBtn';
+//====================================filter-button=====================
 
 //====================================main-page=========================
 @import 'mainPage/mainHeader';
 @import 'mainPage/buttonToUp';
 @import 'mainPage/cats';
 @import 'mainPage/mainFooter';
-
-//====================================media=============================
-@import 'mainPage/mainMedia';
-//====================================media=============================
 
 //====================================main-page=========================
 
@@ -23,5 +21,12 @@
 @import 'subCatPage/subCatBody';
 //====================================cat-page==========================
 
+//====================================goods-page========================
+@import 'goodsPage/goods';
+//====================================goods-page========================
+
 @import 'mediaAnyHover';
+//====================================media=============================
+@import 'mainPage/mainMedia';
+//====================================media=============================
 

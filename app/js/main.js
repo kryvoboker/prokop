@@ -6,10 +6,15 @@
 @@include('./mainPage/menu.js')
 //====================================main-page=========================
 
-//====================================subCat-page=======================
+//====================================filter============================
 @@include('./ion-rangeslider/ionScript.js')
-@@include('./filterSubCat/totalLengthFilter.js')
-@@include('./filterSubCat/diameterFilter.js')
-@@include('./filterSubCat/searchFilter.js')
-@@include('./filterSubCat/addActiveBtn.js')
-//====================================subCat-page=======================
+@@include('./filter/totalLengthFilter.js')
+@@include('./filter/diameterFilter.js')
+@@include('./filter/searchFilter.js')
+@@include('./filter/addActiveBtn.js')
+@@include('./filter/filterBtn.js')
+//====================================filter============================
+
+//====================================goods=============================
+@@include('./goodsPage/price.js')
+//====================================goods=============================

@@ -41,22 +41,22 @@ const scrollToTop = () => {
 	}
 };
 // scrollToTop();
-sticky = document.getElementById("sticky");
-
-// window.onscroll = function () {
-// 	scrollSticky()
-// 	scrollFunction()
-// };
+const sticky = document.getElementById("sticky");
+const zIndex = 'z-index';
+const mainSection = document.querySelector('.main');
 
 function scrollSticky() {
-	if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+	if (document.body.scrollTop > 58 || document.documentElement.scrollTop > 58) {
 		sticky.style.position = "fixed";
 		sticky.style.left = "0";
 		sticky.style.width = "100%";
+		sticky.style.zIndex = "6";
 		sticky.style.padding = "0 20px";
+		mainSection.classList.add('active');
 	} else {
 		sticky.style.position = "static";
 		sticky.style.padding = "0";
+		mainSection.classList.remove('active');
 	}
 }
 window.onload = function () {
@@ -86,7 +86,7 @@ window.onload = function () {
 }
 //====================================main-page=========================
 
-//====================================subCat-page=======================
+//====================================filter============================
 var $range = $(".js-range-slider"),
 	$inputFrom = $(".js-input-from"),
 	$inputTo = $(".js-input-to"),
@@ -317,4 +317,49 @@ function addActiveSaleBtn(e) {
 	}
 }
 
-//====================================subCat-page=======================
+const filterShow = document.querySelector('.filter-btn__show');
+const filterClose = document.querySelector('.filter-btn__close');
+const filterBtnShow = document.getElementById('filterShow');
+const filterBtnClose = document.getElementById('filterClose');
+
+filterShow.onclick = function () {
+	filterBtnShow.classList.add('active');
+	filterBtnClose.classList.add('active');
+	$('.body-grid, .filter, .body-grid-inner').addClass('active');
+}
+
+filterClose.onclick = function () {
+	filterBtnShow.classList.remove('active');
+	filterBtnClose.classList.remove('active');
+	$('.body-grid, .filter, .body-grid-inner').removeClass('active');
+}
+//====================================filter============================
+
+//====================================goods=============================
+const priceBox = document.querySelectorAll('.goods__prices');
+const price = document.querySelectorAll('.goods__price');
+const priceDiscount = document.querySelectorAll('.goods__discount');
+
+// for (let i = 0; i < priceBox.length; i++) {
+// 	const e = priceBox[i];
+// 	for (let j = 0; j < priceDiscount.length; j++) {
+// 		const el = priceDiscount[j];
+// 		for (let k = 0; k < price.length; k++) {
+// 			const elem = price[k];
+// 			if (e.contains(el) && e.contains(elem)) {
+// 				elem.classList.add('without-discount');
+// 			}
+// 		}
+// 	}
+// }
+
+for (const i of priceBox) {
+	for (const k of priceDiscount) {
+		for (const j of price) {
+			if (i.contains(k) && i.contains(j)) {
+				j.classList.add('with-discount');
+			}
+		}
+	}
+}
+//====================================goods=============================

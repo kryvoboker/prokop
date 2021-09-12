@@ -5,6 +5,11 @@
 			transform: scale(1);
 		}
 	}
+	.goods__inner .cats-hover:hover {
+		.title-hover::before {
+			transform: scale(0);
+		}
+	}
 	.top-filter-btns:hover {
 		background-color: #fff;
 	}
@@ -13,6 +18,17 @@
 	}
 	.filter-form-btn:hover {
 		box-shadow: 0 0 10px 0px #000;
+	}
+	.filter-btn__show span:hover::before,
+	.filter-btn__close span:hover::before {
+		color: #fff;
+		background-color: #000;
+	}
+	.goods__link:hover {
+		background-color: rgb(0, 0, 187);
+	}
+	.goods__link-icon:hover::before {
+		color: green;
 	}
 }
 
