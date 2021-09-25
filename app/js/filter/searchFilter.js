@@ -1,3 +1,4 @@
+//====================================searchFilter.js============================
 // для фильтра по стране производителя
 var dotsManufacturerCont = document.getElementById("dotsManufacturerCont");
 var lookMoreManufacturerCont = document.getElementById("lookMoreManufacturerCont");
@@ -114,3 +115,4 @@ function moreColor() {
 	}
 	moreColorBtn.classList.toggle('active');
 }
+//====================================searchFilter.js============================

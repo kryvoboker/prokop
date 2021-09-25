@@ -1,3 +1,4 @@
+//====================================totalLengthFilter.js==================
 const $totLengFrom = data => document.querySelector('#totLengFrom').value = data;
 const $totLengTo = data => document.querySelector('#totLengTo').value = data;
 
@@ -8,3 +9,4 @@ $selectorsTotLeng.forEach($radio => {
 		$totLengTo(this.getAttribute('data-totLeng-to'));
 	});
 });
+//====================================totalLengthFilter.js==================

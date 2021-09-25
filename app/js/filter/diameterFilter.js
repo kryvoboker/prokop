@@ -1,3 +1,4 @@
+//====================================diameterFilter.js========================
 const $diameterFrom = data => document.querySelector('#diameterFrom').value = data;
 const $diameterTo = data => document.querySelector('#diameterTo').value = data;
 
@@ -8,3 +9,4 @@ $selectorsDiameter.forEach($radio => {
 		$diameterTo(this.getAttribute('data-diameter-to'));
 	});
 });
+//====================================diameterFilter.js========================

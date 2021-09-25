@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Страница товара</title>
+
+	@@include('./parts/_head.html')
+
+</head>
+
+<body>
+
+	<div class="wrapper">
+
+		@@include('./parts/_header.html')
+
+		<main class="main hidden">
+			@@include('./parts/_buttonUp.html')
+			<div class="product">
+				<div class="container">
+					<div class="product-grid">
+						<div class="product-grid__item">
+							<div class="product__slider-for">
+								<!-- <button class="product__slider-btn-next" type="button"></button> -->
+								<div class="product__slider-for-item">
+									<img class="product__slider-for-img" src="img/product/img_1.jpg" alt="">
+								</div>
+								<div class="product__slider-for-item">
+									<img class="product__slider-for-img" src="img/product/img_2.jpg" alt="">
+								</div>
+								<div class="product__slider-for-item">
+									<img class="product__slider-for-img" src="img/product/img_3.jpg" alt="">
+								</div>
+								<div class="product__slider-for-item">
+									<img class="product__slider-for-img" src="img/product/img_4.jpg" alt="">
+								</div>
+								<div class="product__slider-for-item">
+									<img class="product__slider-for-img" src="img/product/img_5.jpg" alt="">
+								</div>
+								<!-- <button class="product__slider-btn-prev" type="button">Prev</button> -->
+							</div>
+							<div class="product__slider-nav">
+								<div class="product__slider-nav-item">
+									<img class="product__slider-nav-img" src="img/product/img_1.jpg" alt="">
+								</div>
+								<div class="product__slider-nav-item">
+									<img class="product__slider-nav-img" src="img/product/img_2.jpg" alt="">
+								</div>
+								<div class="product__slider-nav-item">
+									<img class="product__slider-nav-img" src="img/product/img_3.jpg" alt="">
+								</div>
+								<div class="product__slider-nav-item">
+									<img class="product__slider-nav-img" src="img/product/img_4.jpg" alt="">
+								</div>
+								<div class="product__slider-nav-item">
+									<img class="product__slider-nav-img" src="img/product/img_5.jpg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="product-grid__item">
+
+						</div>
+						<div class="product-grid__item">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		@@include('./parts/_footer.html')
+
+	</div>
+
+	@@include('./parts/_scripts.html')
+</body>
+
+</html>

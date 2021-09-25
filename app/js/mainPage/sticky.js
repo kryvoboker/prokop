@@ -1,3 +1,4 @@
+//====================================sticky.js============================
 const sticky = document.getElementById("sticky");
 const zIndex = 'z-index';
 const mainSection = document.querySelector('.main');
@@ -16,3 +17,4 @@ function scrollSticky() {
 		mainSection.classList.remove('active');
 	}
 }
+//====================================sticky.js============================

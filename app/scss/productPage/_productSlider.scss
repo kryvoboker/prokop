@@ -1,0 +1,12 @@
+.product-grid__item {
+	border: 1px solid #000;
+
+	&:first-child {
+		margin: 0 auto;
+	}
+}
+.product-grid {
+	display: grid;
+	grid-template-columns: 1fr .6fr;
+	grid-template-rows: 1fr 300px;
+}

@@ -30,5 +30,10 @@
 	.goods__link-icon:hover::before {
 		color: green;
 	}
+	.product__slider-btn-next:hover::before,
+	.product__slider-btn-prev:hover::before {
+		font-size: 60px;
+		opacity: .7;
+	}
 }
 

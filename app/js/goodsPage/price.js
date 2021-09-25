@@ -1,3 +1,4 @@
+//====================================price.js============================
 const priceBox = document.querySelectorAll('.goods__prices');
 const price = document.querySelectorAll('.goods__price');
 const priceDiscount = document.querySelectorAll('.goods__discount');
@@ -24,3 +25,4 @@ for (const i of priceBox) {
 		}
 	}
 }
+//====================================price.js============================

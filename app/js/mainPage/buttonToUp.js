@@ -1,3 +1,4 @@
+//====================================buttonTuUp.js========================
 // Получить кнопку:
 buttonUp = document.getElementById("btn-up");
 
@@ -27,3 +28,4 @@ const scrollToTop = () => {
 	}
 };
 // scrollToTop();
+//====================================buttonTuUp.js========================

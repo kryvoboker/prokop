@@ -1,5 +1,6 @@
 // alert(window.innerWidth);
 //====================================main-page=========================
+//====================================functions.js============================
 var isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
 
 function removeClasses(el, class_name) {
@@ -12,6 +13,8 @@ if (isMobile.any()) {
 	$('.main-list-cats .main-list__sub-title, ' +
 		'.main-sections .main-sections__item-title').css('color', '#fff');
 }
+//====================================functions.js============================
+//====================================buttonTuUp.js========================
 // Получить кнопку:
 buttonUp = document.getElementById("btn-up");
 
@@ -41,6 +44,8 @@ const scrollToTop = () => {
 	}
 };
 // scrollToTop();
+//====================================buttonTuUp.js========================
+//====================================sticky.js============================
 const sticky = document.getElementById("sticky");
 const zIndex = 'z-index';
 const mainSection = document.querySelector('.main');
@@ -59,6 +64,8 @@ function scrollSticky() {
 		mainSection.classList.remove('active');
 	}
 }
+//====================================sticky.js============================
+//====================================menu.js============================
 window.onload = function () {
 	document.addEventListener("click", documentActions);
 
@@ -84,6 +91,7 @@ window.onload = function () {
 		}
 	}
 }
+//====================================menu.js============================
 //====================================main-page=========================
 
 //====================================filter============================
@@ -145,6 +153,7 @@ $inputTo.on("input", function () {
 		to: val
 	});
 });
+//====================================totalLengthFilter.js==================
 const $totLengFrom = data => document.querySelector('#totLengFrom').value = data;
 const $totLengTo = data => document.querySelector('#totLengTo').value = data;
 
@@ -155,6 +164,8 @@ $selectorsTotLeng.forEach($radio => {
 		$totLengTo(this.getAttribute('data-totLeng-to'));
 	});
 });
+//====================================totalLengthFilter.js==================
+//====================================diameterFilter.js========================
 const $diameterFrom = data => document.querySelector('#diameterFrom').value = data;
 const $diameterTo = data => document.querySelector('#diameterTo').value = data;
 
@@ -165,6 +176,8 @@ $selectorsDiameter.forEach($radio => {
 		$diameterTo(this.getAttribute('data-diameter-to'));
 	});
 });
+//====================================diameterFilter.js========================
+//====================================searchFilter.js============================
 // для фильтра по стране производителя
 var dotsManufacturerCont = document.getElementById("dotsManufacturerCont");
 var lookMoreManufacturerCont = document.getElementById("lookMoreManufacturerCont");
@@ -281,20 +294,24 @@ function moreColor() {
 	}
 	moreColorBtn.classList.toggle('active');
 }
+//====================================searchFilter.js============================
+//====================================addActiveBtn.js=========================
 const sortList = document.querySelector('.filter__sort-list');
 const sortBtn = document.querySelectorAll('.filter__sort-btn');
 
-sortList.addEventListener("click", addActiveSortBtn, addActiveSaleBtn);
+if (sortList) {
+	sortList.addEventListener("click", addActiveSortBtn, addActiveSaleBtn);
 
-function addActiveSortBtn(e) {
-	const targetElement = e.target;
-	for (let i = 0; i < sortBtn.length; i++) {
-		const el = sortBtn[i];
-		if (el.classList.contains('active')) {
-			el.classList.remove('active');
-		}
-		if (!targetElement.classList.contains('active')) {
-			targetElement.classList.add('active');
+	function addActiveSortBtn(e) {
+		const targetElement = e.target;
+		for (let i = 0; i < sortBtn.length; i++) {
+			const el = sortBtn[i];
+			if (el.classList.contains('active')) {
+				el.classList.remove('active');
+			}
+			if (!targetElement.classList.contains('active')) {
+				targetElement.classList.add('active');
+			}
 		}
 	}
 }
@@ -302,40 +319,47 @@ function addActiveSortBtn(e) {
 const saleMethods = document.querySelector('.filter__sale-methods');
 const saleBtn = document.querySelectorAll('.filter__sale-btn');
 
-saleMethods.addEventListener("click", addActiveSaleBtn);
+if (saleMethods) {
+	saleMethods.addEventListener("click", addActiveSaleBtn);
 
-function addActiveSaleBtn(e) {
-	const targetElement = e.target;
-	for (let i = 0; i < saleBtn.length; i++) {
-		const el = saleBtn[i];
-		if (el.classList.contains('active')) {
-			el.classList.remove('active');
-		}
-		if (!targetElement.classList.contains('active')) {
-			targetElement.classList.add('active');
+	function addActiveSaleBtn(e) {
+		const targetElement = e.target;
+		for (let i = 0; i < saleBtn.length; i++) {
+			const el = saleBtn[i];
+			if (el.classList.contains('active')) {
+				el.classList.remove('active');
+			}
+			if (!targetElement.classList.contains('active')) {
+				targetElement.classList.add('active');
+			}
 		}
 	}
 }
-
+//====================================addActiveBtn.js=========================
+//====================================filterBtn.js============================
 const filterShow = document.querySelector('.filter-btn__show');
 const filterClose = document.querySelector('.filter-btn__close');
 const filterBtnShow = document.getElementById('filterShow');
 const filterBtnClose = document.getElementById('filterClose');
 
-filterShow.onclick = function () {
-	filterBtnShow.classList.add('active');
-	filterBtnClose.classList.add('active');
-	$('.body-grid, .filter, .body-grid-inner').addClass('active');
-}
+if (filterShow && filterClose) {
+	filterShow.onclick = function () {
+		filterBtnShow.classList.add('active');
+		filterBtnClose.classList.add('active');
+		$('.body-grid, .filter, .body-grid-inner').addClass('active');
+	};
 
-filterClose.onclick = function () {
-	filterBtnShow.classList.remove('active');
-	filterBtnClose.classList.remove('active');
-	$('.body-grid, .filter, .body-grid-inner').removeClass('active');
+	filterClose.onclick = function () {
+		filterBtnShow.classList.remove('active');
+		filterBtnClose.classList.remove('active');
+		$('.body-grid, .filter, .body-grid-inner').removeClass('active');
+	};
 }
+//====================================filterBtn.js============================
 //====================================filter============================
 
 //====================================goods=============================
+//====================================price.js============================
 const priceBox = document.querySelectorAll('.goods__prices');
 const price = document.querySelectorAll('.goods__price');
 const priceDiscount = document.querySelectorAll('.goods__discount');
@@ -362,4 +386,77 @@ for (const i of priceBox) {
 		}
 	}
 }
+//====================================price.js============================
 //====================================goods=============================
+
+//====================================productPage=======================
+$(function () {
+	if ($('.product__slider-for') && $('.product__slider-nav')) {
+		$('.product__slider-for').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: true,
+			fade: true,
+			nextArrow: '<button class="product__slider-btn-next" type="button"></button>',
+			prevArrow: '<button class="product__slider-btn-prev" type="button"></button>',
+			asNavFor: '.product__slider-nav'
+		});
+		$('.product__slider-nav').slick({
+			slidesToShow: 5,
+			slidesToScroll: 1,
+			asNavFor: '.product__slider-for',
+			dots: false,
+			centerMode: true,
+			focusOnSelect: true,
+			arrows: false
+		});
+	}
+
+	const navImgSlider = document.querySelectorAll('.product__slider-nav-img');
+	const forImgItem = document.querySelectorAll('.product__slider-for-item');
+	const closestClass = '.slick-slide';
+	const getClosestClass = document.querySelectorAll('.slick-slide');
+	const classAddOne = 'slick-current';
+	const classAddTwo = 'slick-active';
+	const classCenter = 'slick-center';
+	let getStyleClosestClass;
+
+	function addSlickActiveNav(el, classNav, classAddOne, classCenter) {
+		el.closest(classNav).classList.add(classAddOne, classCenter);
+	}
+	function addSlickActiveFor(el, classFor, classAddOne, classAddTwo, getClosestClass) {
+		el.closest(classFor).classList.add(classAddOne, classAddTwo);
+
+		for (let i = 0; i < getClosestClass.length / 2; i++) {
+			const element = getClosestClass[i];
+			getStyleClosestClass = getComputedStyle(element).opacity;
+
+			if (getStyleClosestClass == 1) {
+				element.style.opacity = 0;
+				element.style.zIndex = 998;
+				el.closest(classFor).style.opacity = 1;
+				el.closest(classFor).style.zIndex = 999;
+			}
+		}
+	}
+	function removeSlickActiveNav(el, classFor, classAddOne, classAddTwo) {
+		el.closest(classFor).classList.remove(classAddOne);
+		el.closest(classFor).classList.remove(classAddTwo);
+	}
+
+	if (getClosestClass) {
+		for (let i = 0; i < navImgSlider.length; i++) {
+			const el = navImgSlider[i];
+			const elFor = forImgItem[i];
+
+			el.onmouseenter = function () {
+				addSlickActiveNav(el, closestClass, classAddOne, classCenter);
+				addSlickActiveFor(elFor, closestClass, classAddOne, classAddTwo, getClosestClass);
+			};
+			el.onmouseleave = function () {
+				removeSlickActiveNav(el, closestClass, classAddOne, classCenter);
+			};
+		}
+	}
+});
+//====================================productPage=======================

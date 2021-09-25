@@ -1,3 +1,4 @@
+//====================================mainHeader.js========================
 // document.querySelector('.header__phone-icon-phone').onclick = function () {
 // 	const elemOne = document.querySelector('.header__phone');
 // 	elemOne.classList.toggle('activated');
@@ -25,3 +26,4 @@
 // 	}
 // };
 // window.onresize();
+//====================================mainHeader.js========================

@@ -1,3 +1,4 @@
+//====================================menu.js============================
 window.onload = function () {
 	document.addEventListener("click", documentActions);
 
@@ -23,3 +24,4 @@ window.onload = function () {
 		}
 	}
 }
+//====================================menu.js============================
