@@ -262,9 +262,14 @@ body {
 	color: red;
 	margin-bottom: 5px;
 }
-
-
-
-
-
-
+.product__sale-link,
+.header__icons-link {
+	font-family: 'icomoon';
+	font-size: 26px;
+	color: #000;
+}
+.heart-icon {
+	&::before {
+		content: "\e904";
+	}
+}

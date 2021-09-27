@@ -138,16 +138,7 @@
 		justify-content: center;
 		align-items: center;
 	}
-	&__icons-link {
-		font-family: 'icomoon';
-		font-size: 26px;
-		color: #000;
-
-		&:first-child::before {
-			content: "\e904";
-		}
-		&:last-child::before {
-			content: "\e903";
-		}
+	&__icons-link:last-child::before {
+		content: "\e903";
 	}
 }

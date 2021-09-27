@@ -13,6 +13,7 @@
 	rel="stylesheet">
 <link rel="stylesheet" href="css/ion.rangeSlider.css">
 <link rel="stylesheet" href="css/slick.css">
+<link rel="stylesheet" href="css/jquery.fancybox.css">
 <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -288,7 +289,7 @@
 						<button class="header__btn" type="submit">Найти</button>
 					</form>
 					<div class="header__icons">
-						<a class="header__icons-link" href="#"></a>
+						<a class="header__icons-link heart-icon" href="#"></a>
 						<a class="header__icons-link" href="#"></a>
 					</div>
 				</div>
@@ -309,26 +310,34 @@
 			<button class="main__btn-up" onclick='scrollToTop();' id="btn-up" title="Перейти к началу">Вверх</button>
 			<div class="product">
 				<div class="container">
-					<div class="product-grid">
+					<section class="product-grid">
 						<div class="product-grid__item">
 							<div class="product__slider-for">
-								<!-- <button class="product__slider-btn-next" type="button"></button> -->
 								<div class="product__slider-for-item">
-									<img class="product__slider-for-img" src="img/product/img_1.jpg" alt="">
+									<a href="img/product/img_1.jpg" data-fancybox="images">
+										<img class="product__slider-for-img" src="img/product/img_1.jpg" alt="">
+									</a>
 								</div>
 								<div class="product__slider-for-item">
-									<img class="product__slider-for-img" src="img/product/img_2.jpg" alt="">
+									<a href="img/product/img_2.jpg" data-fancybox="images">
+										<img class="product__slider-for-img" src="img/product/img_2.jpg" alt="">
+									</a>
 								</div>
 								<div class="product__slider-for-item">
-									<img class="product__slider-for-img" src="img/product/img_3.jpg" alt="">
+									<a href="img/product/img_3.jpg" data-fancybox="images">
+										<img class="product__slider-for-img" src="img/product/img_3.jpg" alt="">
+									</a>
 								</div>
 								<div class="product__slider-for-item">
-									<img class="product__slider-for-img" src="img/product/img_4.jpg" alt="">
+									<a href="img/product/img_4.jpg" data-fancybox="images">
+										<img class="product__slider-for-img" src="img/product/img_4.jpg" alt="">
+									</a>
 								</div>
 								<div class="product__slider-for-item">
-									<img class="product__slider-for-img" src="img/product/img_5.jpg" alt="">
+									<a href="img/product/img_5.jpg" data-fancybox="images">
+										<img class="product__slider-for-img" src="img/product/img_5.jpg" alt="">
+									</a>
 								</div>
-								<!-- <button class="product__slider-btn-prev" type="button">Prev</button> -->
 							</div>
 							<div class="product__slider-nav">
 								<div class="product__slider-nav-item">
@@ -349,12 +358,39 @@
 							</div>
 						</div>
 						<div class="product-grid__item">
+							<div class="product__sale">
+								<div class="product__sale-item product__sale-item--info-title">
+									<div class="product__sale-row">
+										<h1 class="product__sale-title">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, perspiciatis
+											minima. Optio quaerat voluptatibus vero fuga, ratione cupiditate accusantium
+											dolorum. Modi soluta eum eligendi! Aliquid modi ipsum facilis tempora
+											quisquam?
+										</h1>
+										<p class="product__sale-vendor">Код: <span>00001</span></p>
+										<p class="product__sale-availability">В наличии</p>
+										<p class="product__sale-price"><span>500</span>
+											<span>грн</span><span>/</span><span>шт.</span></p>
+									</div>
+									<div class="product__sale-row">
+										<a class="product__sale-link heart-icon" href="#"></a>
+									</div>
+								</div>
+								<div class="product__sale-item product__sale-item--info-sale">
 
+								</div>
+								<div class="product__sale-item product__sale-item--deliv-meth">
+
+								</div>
+								<div class="product__sale-item product__sale-item--paym-meth">
+
+								</div>
+							</div>
 						</div>
 						<div class="product-grid__item">
 
 						</div>
-					</div>
+					</section>
 				</div>
 			</div>
 		</main>
@@ -540,6 +576,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="js/ion.rangeSlider.js"></script>
 <script src="js/slick.js"></script>
+<script src="js/jquery.fancybox.js"></script>
 <script src="js/main.js"></script>
 </body>
 
